@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
 </head>
+
 <body>
-    This is <%= kindOfDay %> and I am working hard and having fun.
+    <h1 style="color:orange;"><%= kindOfDay %></h1>
+
+    <ul>
+        
+        <% for (var i = 0 ; i < newListItems.length ; i++) { %>
+            <li> <%=  newListItems[i] %> </li>
+       <% } %>
+       
+    </ul>
+    <form action="/" method="POST">
+        <input type="text" name="items" id="item" autocomplete="off" autofocus autocapitalize="capitalized">
+        <input type="submit" value="ADD">
+    </form>
+
 </body>
+
 </html>
